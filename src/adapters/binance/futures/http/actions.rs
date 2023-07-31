@@ -151,7 +151,7 @@ impl BinanceFuturesApi {
 
         let response = self
             .client
-            .send(Method::GET, "/fapi/v1/userTrades", true, &mut params)
+            .send(Method::GET, "/papi/v1/um/userTrades", true, &mut params)
             .await;
 
         let res_data = self.client.check_response_data(response);
